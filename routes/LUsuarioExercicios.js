@@ -22,13 +22,12 @@ module.exports = function(app) {
 			});
 		});
 
-	app.route("/usuarioexerciciosget")
-		.post(function(req, res){
-			var sequencia = req.body.sequencia;
-			var exercicio_id = req.body.exercicio_id;
-			var usuario_id = req.body.usuario_id;
+	app.route("/usuarioexercicios/:idEx/:idUs")
+		.get(function(req, res){
+			var exercicio_id = req.params.idEx;
+			var usuario_id = req.params.idUs;
 
-			UsuarioExercicios.findOne({ where: { sequencia: sequencia, exercicio_id: exercicio_id, usuario_id: usuario_id }})
+			UsuarioExercicios.findOne({ where: { exercicio_id: exercicio_id, usuario_id: usuario_id }})
 			.then(function(result) {
 				res.json(result);
 			})

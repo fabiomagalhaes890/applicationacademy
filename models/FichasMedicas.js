@@ -91,7 +91,7 @@ module.exports = function(sequelize, DataType) {
 			allowNull: true
 		},
 		peso: {
-			type: DataType.REAL,
+			type: DataType.STRING,
 			allowNull: true
 		},
 		estatura: {
