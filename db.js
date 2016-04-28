@@ -1,10 +1,8 @@
-"use strict";
-
 var fs = require("fs");
 var path = require("path");
 var Sequelize = require("sequelize");
 
-var db = {};
+var db = null;
 
 module.exports = function(app) {
 
@@ -18,8 +16,8 @@ module.exports = function(app) {
 		);
 
 		db = {
-			sequelize: sequelize,
-			Sequelize: Sequelize,
+			sequelize,
+			Sequelize,
 			models: {}
 		};
 
