@@ -3,7 +3,7 @@ const cors = require("cors");
 
 module.exports = function(app) {
 
-	app.set("port", 3000);
+	app.set("port", 3002);
 	app.set("json spaces", 4);
 	app.use(cors({
 		origin: ["http://localhost:3001","http://localhost:8100"],
