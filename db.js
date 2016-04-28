@@ -18,8 +18,8 @@ module.exports = function(app) {
 		);
 
 		db = {
-			sequelize,
-			Sequelize,
+			sequelize: sequelize,
+			Sequelize: Sequelize,
 			models: {}
 		};
 
