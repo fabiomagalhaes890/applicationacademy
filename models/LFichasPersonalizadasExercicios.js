@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataType) {
 
-	const l_fichaspersonalizadas_exercicios = sequelize.define("l_fichaspersonalizadas_exercicios", {
+	var l_fichaspersonalizadas_exercicios = sequelize.define("l_fichaspersonalizadas_exercicios", {
 		id: {
 			type: DataType.INTEGER,
 			primaryKey: true,

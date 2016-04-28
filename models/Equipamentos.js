@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataType) {
 
-	const equipamentos = sequelize.define("equipamentos", {
+	var equipamentos = sequelize.define("equipamentos", {
 		id: {
 			type: DataType.INTEGER,
 			primaryKey: true,

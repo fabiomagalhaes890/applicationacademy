@@ -1,6 +1,6 @@
 module.exports = function(app) {
 
-	const FichasPersonalizadasExercicios = app.db.models.l_fichaspersonalizadas_exercicios;
+	var FichasPersonalizadasExercicios = app.db.models.l_fichaspersonalizadas_exercicios;
 
 	app.route("/fichasperexercicios")
 		.post(function(req, res) {

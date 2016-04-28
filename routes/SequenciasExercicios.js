@@ -1,6 +1,6 @@
 	module.exports = function(app) {
 	
-	const SequenciasExercicios = app.db.models.sequencias_exercicios;
+	var SequenciasExercicios = app.db.models.sequencias_exercicios;
 
 	app.route("/sequenciasexercicios/:id")
 		.get(function(req, res) {

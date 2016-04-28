@@ -1,6 +1,6 @@
 module.exports = function(app) {
 
-	const ExerciciosEquipamentos = app.db.models.l_exercicios_equipamentos;
+	var ExerciciosEquipamentos = app.db.models.l_exercicios_equipamentos;
 
 	app.route("/exerciciosequipamentos")
 		.post(function(req, res) {

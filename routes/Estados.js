@@ -1,6 +1,6 @@
 module.exports = function(app){
 
-	const Estados = app.db.models.estados;
+	var Estados = app.db.models.estados;
 
 	app.route("/estados")
 		.get(function(req, res) {

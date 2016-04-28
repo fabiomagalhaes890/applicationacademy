@@ -1,6 +1,6 @@
 module.exports = function(app) {
 
-	const FichasModelo = app.db.models.fichas_modelo;
+	var FichasModelo = app.db.models.fichas_modelo;
 
 	app.route("/fichasmodelo")
 		.get(function(req, res) {

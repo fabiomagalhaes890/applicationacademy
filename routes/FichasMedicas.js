@@ -1,7 +1,7 @@
 module.exports = function(app) {
 
-	const Usuarios = app.db.models.usuarios;
-	const FichaMedica = app.db.models.fichas_medicas;
+	var Usuarios = app.db.models.usuarios;
+	var FichaMedica = app.db.models.fichas_medicas;
 
 	app.route("/fichasmedicas/:id") // CRUD ficha medica para o front do usuario 
 		.get(function(req, res) {

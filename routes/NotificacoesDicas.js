@@ -1,6 +1,6 @@
 module.exports = function(app) {
 
-	const NotificacoesDicas = app.db.models.notificacoes_dicas;
+	var NotificacoesDicas = app.db.models.notificacoes_dicas;
 
 	app.route("/notificacoesdicas")
 		.get(function(req, res) {

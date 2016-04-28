@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataType) {
 
-	const l_usuario_exercicios = sequelize.define("l_usuario_exercicios", {
+	var l_usuario_exercicios = sequelize.define("l_usuario_exercicios", {
 		id: {
 			type: DataType.INTEGER,
 			primaryKey: true,

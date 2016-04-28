@@ -1,6 +1,6 @@
 module.exports = function(app) {
 
-	const Profissionais = app.db.models.profissionais;
+	var Profissionais = app.db.models.profissionais;
 
 	/*app.route("/profissionais1")
 		.get(function(req, res) {

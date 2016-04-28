@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataType) {
 
-	const notificacoes_dicas = sequelize.define("notificacoes_dicas", {
+	var notificacoes_dicas = sequelize.define("notificacoes_dicas", {
 		id: {
 			type: DataType.INTEGER,
 			primaryKey: true,

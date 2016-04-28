@@ -1,7 +1,7 @@
 module.exports = function(app) {
 
-	const Usuarios = app.db.models.usuarios;
-	const FichaModelo = app.db.models.fichas_modelo;
+	var Usuarios = app.db.models.usuarios;
+	var FichaModelo = app.db.models.fichas_modelo;
 
 	app.route("/usuarios")
 		.get(function(req, res) {

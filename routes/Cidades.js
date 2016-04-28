@@ -1,6 +1,6 @@
 module.exports = function(app){
 
-	const Cidades = app.db.models.cidades;
+	var Cidades = app.db.models.cidades;
 
 	app.route("/cidades")
 		.get(function(req, res) {

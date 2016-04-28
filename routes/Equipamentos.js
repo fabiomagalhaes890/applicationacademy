@@ -1,6 +1,6 @@
 module.exports = function(app) {
 
-	const Equipamentos = app.db.models.equipamentos;
+	var Equipamentos = app.db.models.equipamentos;
 
 	app.route("/equipamentos")
 		.get(function(req, res) {

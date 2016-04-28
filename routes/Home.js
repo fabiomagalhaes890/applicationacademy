@@ -1,10 +1,10 @@
 module.exports = function(app){
 
-	const Metas = app.db.models.metas_usuarios;
-	const Alunos = app.db.models.usuarios;
-	const Solicitacoes = app.db.models.solicitacoes;
-	const Equipamentos = app.db.models.equipamentos;
-	const Historico = app.db.models.historico_revisoes;
+	var Metas = app.db.models.metas_usuarios;
+	var Alunos = app.db.models.usuarios;
+	var Solicitacoes = app.db.models.solicitacoes;
+	var Equipamentos = app.db.models.equipamentos;
+	var Historico = app.db.models.historico_revisoes;
 
 	app.route("/ultimosalunos")
 		.get(function(req, res) {

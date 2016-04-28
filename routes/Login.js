@@ -1,7 +1,7 @@
 module.exports = function(app) {
 
-	const Alunos = app.db.models.usuarios;
-	const Colaboradores = app.db.models.profissionais;
+	var Alunos = app.db.models.usuarios;
+	var Colaboradores = app.db.models.profissionais;
 
 	app.route("/login")
 		.post(function(req, res) {

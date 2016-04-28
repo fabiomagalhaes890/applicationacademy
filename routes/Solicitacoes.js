@@ -1,7 +1,7 @@
 module.exports = function(app) {
 	
-	const Usuarios = app.db.models.usuarios;
-	const Solicitacoes = app.db.models.solicitacoes;
+	var Usuarios = app.db.models.usuarios;
+	var Solicitacoes = app.db.models.solicitacoes;
 
 	app.route("/solicitacoesusuarios")
 		.get(function(req, res) {

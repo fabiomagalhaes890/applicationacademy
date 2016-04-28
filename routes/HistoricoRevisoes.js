@@ -1,6 +1,6 @@
 module.exports = function(app) {
 
-	const HistoricoRevisoes = app.db.models.historico_revisoes;
+	var HistoricoRevisoes = app.db.models.historico_revisoes;
 
 	app.route("/historicorevisoes")
 		.get(function(req, res) {

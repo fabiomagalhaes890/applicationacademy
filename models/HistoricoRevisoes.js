@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataType) {
 
-	const historico_revisoes = sequelize.define("historico_revisoes", {
+	var historico_revisoes = sequelize.define("historico_revisoes", {
 		id: {
 			type: DataType.INTEGER,
 			primaryKey: true,

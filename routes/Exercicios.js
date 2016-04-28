@@ -1,6 +1,6 @@
 module.exports = function(app) {
 	
-	const Exercicios = app.db.models.exercicios;
+	var Exercicios = app.db.models.exercicios;
 
 	app.route("/exercicios")
 		.get(function(req, res) {

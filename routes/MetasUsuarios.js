@@ -1,7 +1,7 @@
 module.exports = function(app) {
 
-	const Usuarios = app.db.models.usuarios;
-	const MetasUsuarios = app.db.models.metas_usuarios;
+	var Usuarios = app.db.models.usuarios;
+	var MetasUsuarios = app.db.models.metas_usuarios;
 
 	app.route("/metasusuarios")
 		.post(function(req, res) {

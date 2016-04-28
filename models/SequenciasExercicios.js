@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataType) {
 
-	const sequencias_exercicios = sequelize.define("sequencias_exercicios", {
+	var sequencias_exercicios = sequelize.define("sequencias_exercicios", {
 		id: {
 			type: DataType.INTEGER,
 			primaryKey: true,
