@@ -1,10 +1,10 @@
 module.exports = function(app) {
 
-	var Usuarios = app.db.models.usuarios;
+	var Alunos = app.db.models.alunos;
 
-	app.route("/usuarios")
+	app.route("/alunos")
 		.get(function(req, res) {
-			Usuarios.findAll({})
+			Alunos.findAll({})
 			.then(function(result) {
 				res.json(result);
 			})
@@ -14,7 +14,7 @@ module.exports = function(app) {
 		})
 		.post(function(req, res) { // criar regra para gerar fichausuario quando salvar
 
-			Usuarios.create(req.body)
+			Alunos.create(req.body)
 			.then(function(result) {
 				res.json(result);
 			})
@@ -23,9 +23,9 @@ module.exports = function(app) {
 			});
 		});
 
-	app.route("/usuarios/:id")
+	app.route("/alunos/:id")
 		.get(function(req, res) {
-			Usuarios.findOne({where: { id: req.params.id }})
+			Alunos.findOne({where: { id: req.params.id }})
 			.then(function(result) {
 				if(result) {
 					res.json(result);
@@ -38,7 +38,7 @@ module.exports = function(app) {
 			});				
 		})
 		.put(function(req, res) {
-			Usuarios.update(req.body, {where: { id: req.params.id }})
+			Alunos.update(req.body, {where: { id: req.params.id }})
 			.then(function(result) {
 				res.json(result);
 			})
@@ -47,7 +47,7 @@ module.exports = function(app) {
 			});				
 		})
 		.delete(function(req, res) {
-			Usuarios.destroy({where: { id: req.params.id }})
+			Alunos.destroy({where: { id: req.params.id }})
 			.then(function(result) {
 				res.sendStatus(204);
 			})
@@ -56,7 +56,3 @@ module.exports = function(app) {
 			});
 		});
 };
-/*
-"fichas_modelo_id": null,
-"fichas_personalizada_id": null
-*/

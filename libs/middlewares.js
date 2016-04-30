@@ -1,9 +1,8 @@
-const bodyParser = require("body-parser");
-const cors = require("cors");
+var bodyParser = require("body-parser");
+var cors = require("cors");
 
 module.exports = function(app) {
 
-	app.set("port", 80);
 	app.set("json spaces", 4);
 	app.use(cors({
 		origin: ["http://localhost:3001","http://localhost:8100"],

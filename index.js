@@ -1,6 +1,6 @@
-const express = require("express");
-const consign = require("consign");
-const app = express();
+var express = require("express");
+var consign = require("consign");
+var app = express();
 
 consign()
 	.include("libs/config.js")
