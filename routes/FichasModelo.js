@@ -54,4 +54,4 @@ module.exports = function(app) {
 				res.status(412).json({msg: err.message});
 			});
 		});
-};
+}; 
