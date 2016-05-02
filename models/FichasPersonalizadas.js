@@ -47,6 +47,7 @@ module.exports = function(sequelize, DataType) {
 			associate: function(models) {
 				fichas_personalizadas.hasMany(models.usuarios);
 				fichas_personalizadas.hasMany(models.l_fichaspersonalizadas_exercicios);
+				fichas_personalizadas.hasMany(models.l_usuario_exercicios);
 			}
 		}
 	});

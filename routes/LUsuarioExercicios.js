@@ -3,7 +3,7 @@ module.exports = function(app) {
 	var UsuarioExercicios = app.db.models.l_usuario_exercicios;
 
 	app.route("/usuarioexercicios")
-	.get(function(req, res) {
+		.get(function(req, res) {
 			UsuarioExercicios.findAll({})
 			.then(function(result) {
 				res.json(result);
@@ -13,6 +13,7 @@ module.exports = function(app) {
 			});
 		})
 		.post(function(req, res) {
+			console.log(req);
 			UsuarioExercicios.create(req.body)
 			.then(function(result) {
 				res.json(result);
@@ -52,9 +53,13 @@ module.exports = function(app) {
 			});
 		});
 
-	app.route("/alunoexercicios/:id")
-		.get(function(req, res) {
-			UsuarioExercicios.findAll({ where: { usuario_id: req.params.id }})
+	app.route("/usuarioexercicios/:idEx/:idUs/:idSeq")
+		.get(function(req, res){
+			var exercicio_id = req.params.idEx;
+			var usuario_id = req.params.idUs;
+			var sequencia = req.params.idSeq;
+
+			UsuarioExercicios.findOne({ where: { exercicio_id: exercicio_id, usuario_id: usuario_id, sequencia: sequencia }})
 			.then(function(result) {
 				res.json(result);
 			})

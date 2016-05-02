@@ -26,6 +26,8 @@ module.exports = function(sequelize, DataType) {
 			associate: function(models) {
 				l_usuario_exercicios.belongsTo(models.exercicios);
 				l_usuario_exercicios.belongsTo(models.usuarios);
+				l_usuario_exercicios.belongsTo(models.fichas_modelo);
+				l_usuario_exercicios.belongsTo(models.fichas_personalizadas);
 			}
 		}
 	});
